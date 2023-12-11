@@ -1,10 +1,12 @@
 import tp1.exercice1.Note;
+import tp1.exercice2.PrixTTC;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args){
-        Note notes = new Note();
+        //Note notes = new Note();
+        PrixTTC prix = new PrixTTC(100);
     }
 }
 
