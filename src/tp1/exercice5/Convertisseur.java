@@ -18,17 +18,23 @@ public class Convertisseur {
         this.tableauConvertion.put("M", 1000);
 
         this.romain = romain;
-
-        System.out.println("resultat après convertion : " + conversion(this.romain));
+        if(romain.length()<=15){
+            System.out.println("resultat après convertion : " + conversion(this.romain));
+        }else{
+            System.out.println("Le nombre de caractère doit être supérieur de 15 maximum");
+        }
 
     }
 
     public int conversion(String romain) {
         int chiffreConverti = 0;
+
         String lettrePrecedente = "";
         String lettrePrecedenteEtActuelle = "";
         int chiffrePrecedent = 0;
+
         romain = romain.toUpperCase();
+
         int longueurChiffreRomain = romain.length();
         char[] tableau = new char[longueurChiffreRomain];
 
@@ -38,6 +44,7 @@ public class Convertisseur {
 
         for (int index1 = 0; index1 < tableau.length; index1++) {
             for (Map.Entry<String, Integer> maMap : tableauConvertion.entrySet()) {
+
                 if (maMap.getKey().equals(String.valueOf(tableau[index1]))) {
                     System.out.println(maMap.getKey());
                     lettrePrecedenteEtActuelle = lettrePrecedente + maMap.getKey();
