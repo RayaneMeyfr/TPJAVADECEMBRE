@@ -14,16 +14,21 @@ public class Doublon {
     }
 
     public boolean verificationDeDoublon(int[] listes){
-        int index = 0;
-        for(int nombre : listes){
-            for(int unNombre : listes){
-
-
+        boolean verifDoublon = false;
+        int comteurDoublon = 0;
+        for(int index1 = 0; index1<listes.length;index1++) {
+            for(int index2 = 0; index2<listes.length;index2++) {
+                if (listes[index1]==listes[index2]){
+                    comteurDoublon++;
+                    if(comteurDoublon>=2){
+                        verifDoublon = true;
+                        break;
+                    }
+                }
             }
-
+            comteurDoublon = 0;
         }
 
-
-        return false;
+        return verifDoublon;
     }
 }
