@@ -67,4 +67,5 @@ public class Thermometre {
             this.temperature = temperature;
             typeTemperature = "Fahrenheit";
     }
+
 }
